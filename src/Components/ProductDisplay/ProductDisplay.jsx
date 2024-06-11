@@ -34,10 +34,14 @@ import star_dull_icon from '../Assets/star_dull_icon.png'
                     ${product.new_price}
                 </div>
                 <div className="productdisplay-right-description">
-                    hii.
+                Khaki regular fitted top
+Solid
+Round neck, long, regular sleeves   
+Cut out detail
+Woven
                 </div>
                 <div className="productdisplay-right-size">
-                    <h1>Select Size</h1>
+                    <p><h1>Select Size</h1></p>
                     <div className="productdisplay-right-size">
                     <div>S</div>
                     <div>M</div>

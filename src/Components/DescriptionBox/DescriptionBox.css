@@ -1,7 +1,7 @@
 .descriptionbox{
     margin: 120px 170px;
 }
-.descriptionboxinavigator{
+.descriptionbox-navigator{
     display: flex;
 }
 .descriptionbox-nav-box{
