@@ -15,7 +15,7 @@ export const ShopContext= createContext(null);
         
 
         const addToCart =(itemId)=>{
-            setCartItems((prev)=>({...prev,[itemId]:prev[itemId]+1}));
+            setCartItems((prev)=>({...prev,[itemId]:prev[itemId]+1}))
             console.log(cartItems);
         }
 
@@ -23,10 +23,11 @@ export const ShopContext= createContext(null);
             setCartItems((prev)=>({...prev,[itemId]:prev[itemId]-1}))
         }
 
-
         const contextValue ={all_product,cartItems,addToCart,removeFromCart};
     return(
-        <ShopContext.Provider value={contextValue}>{props.children}</ShopContext.Provider>
+        <ShopContext.Provider value={contextValue}>
+            {props.children}
+            </ShopContext.Provider>
     )
 }
 
