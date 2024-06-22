@@ -17,8 +17,9 @@ const AddProduct = () => {
       setImage(e.target.files[0]);
     }
     const changeHandler =(e) =>{
-      setproductDetails(...productDetails,[e.target.value]);
+      setproductDetails({...productDetails,[e.target.name]:e.target.value});
     }
+    
     const Add_Product = async () =>{
       console.log(productDetails);
       let responseData;
@@ -33,7 +34,7 @@ const AddProduct = () => {
           Accept:'application/json',
         },
         body:formData,
-      }).then((resp)=> resp.json()).then((data)=>{responseData=data})
+      }).then((resp)=> resp.json()).then((data)=>{responseData=data});
 
       if(responseData.success)
         {
@@ -53,11 +54,6 @@ const AddProduct = () => {
         }
     }
 
-
-
-
-
-
   return (
     <div className='add-product'>
       <div className="addproduct-itemfield">
@@ -67,7 +63,7 @@ const AddProduct = () => {
       <div className="addproduct-price">
         <div className="addproduct-itemfield">
           <p>Price</p>
-          <input type="text" name="old_price" placeholder='Type here'  />
+          <input value={productDetails.old_price} onChange={changeHandler} type="text" name="old_price" placeholder='Type here'  />
         </div>
         <div className="addproduct-itemfield">
           <p>Offer Price</p>
